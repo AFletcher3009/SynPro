@@ -1,14 +1,14 @@
 <?php
-
+    // DB connetion
     $conn=mysqli_connect('localhost', 'root', '', 'audiodb');
     $result = mysqli_query($conn,"SELECT * FROM audio");
     $row = mysqli_fetch_array($result);
-
+    //deletes media file from DB
      if(isset($_POST['deleteMedia'])) {
         $value = $row['filename'];
         deleteMedia($value);
      }
-
+     //Connects to DB > executes delete query
      function deleteMedia($Filename){
         $conn=mysqli_connect('localhost', 'root', '', 'audiodb');
         if (mysqli_connect_errno()) {

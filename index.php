@@ -6,6 +6,7 @@
         <!-- included to the tableList() can be used -->
         <?php
         include 'tableList.php';
+        //include 'displayTable.php';
         include 'select.php';
         ?>
 
